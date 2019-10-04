@@ -1,6 +1,6 @@
-# User Management System API
+# Employee Management System API
 
-Sample API for User Management System built using NodeJS
+Sample API for Employee Management System built using NodeJS
 
 The following tools and technologies being used with their best practices:
 
