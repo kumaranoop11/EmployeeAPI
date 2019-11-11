@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon --exec babel-node ./bin/www --inspect",
+    "start": "nodemon --exec babel-node ./bin/www",
     "debug": "nodemon --inspect babel-node ./bin/www",
     "stop": "npm stop"
   },
@@ -12,31 +12,29 @@
     "stop": "pm2 kill"
   },
   "dependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
     "app-root-path": "^2.1.0",
-    "bcrypt": "^3.0.6",
+    "bcryptjs": "^2.4.3",
     "compression": "^1.7.3",
     "cookie-parser": "~1.4.3",
     "cors": "^2.8.5",
     "debug": "~2.6.9",
     "dotenv": "^6.2.0",
+    "express": "^4.16.4",
     "hbs": "^4.0.5",
     "helmet": "^3.21.1",
     "http-errors": "~1.6.2",
     "jsonwebtoken": "^8.4.0",
     "moment-timezone": "^0.5.23",
-    "mongoose": "^5.4.2",
+    "mongoose": "^5.7.5",
     "mongoose-auto-increment": "^5.0.1",
     "morgan": "~1.9.0",
+    "nodemon": "^1.18.9",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
     "pm2": "^3.2.4",
     "winston": "^3.1.0"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.2.2",
-    "@babel/node": "^7.2.2",
-    "@babel/preset-env": "^7.2.3",
-    "express": "^4.16.4",
-    "nodemon": "^1.18.9"
   }
 }

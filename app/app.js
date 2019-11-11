@@ -12,7 +12,7 @@ var indexRouter = require('./routes/index');
 var config = require('./config/config');
 var db = require('./config/db');
 
-db.init(config.dbURL);
+db.init(config.mdbURL);
 require('./authentication/authentication');
 
 var app = express();
