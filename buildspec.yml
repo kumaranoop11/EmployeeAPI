@@ -2,19 +2,18 @@ version: 0.2
 phases:
   install:
     commands:
-      - echo install step...
+      - echo install step from code...
   pre_build:
     commands:
       - echo logging in to AWS ECR...
-      - $(aws ecr get-login --no-include-email --region ap-south-1 --no-verify-ssl)
+      - aws ecr get-login --no-include-email --region ap-south-1
   build:
     commands:
       - echo build Docker image on `date`
-      - cd src
-      - docker build -t employee-app:latest .
-      - docker tag employee-app:latest 328859930614.dkr.ecr.ap-south-1.amazonaws.com/employee-app:latest
+      - docker build -t employeeapi:latest .
+      - docker tag employeeapi:latest 328859930614.dkr.ecr.ap-south-1.amazonaws.com/employeeapi:latest
   post_build:
     commands:
       - echo build Docker image complete `date`
       - echo push latest Docker images to ECR...
-      - docker push 328859930614.dkr.ecr.ap-south-1.amazonaws.com/employee-app:latest
+      - docker push 328859930614.dkr.ecr.ap-south-1.amazonaws.com/employeeapi:latest
