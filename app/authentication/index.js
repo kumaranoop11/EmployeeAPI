@@ -6,7 +6,7 @@ var config = require('../config/config');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.json({'name': 'Authservice called'});
+  res.json({'name': 'Authservice called from aws'});
 });
 
 router.post('/signup', async (req, res, next) => {
