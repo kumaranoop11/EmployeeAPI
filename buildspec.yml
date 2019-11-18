@@ -10,8 +10,8 @@ phases:
   build:
     commands:
       - echo build Docker image on `date`
-      - docker build -t employeeapi:latest .
-      - docker tag employeeapi:latest 328859930614.dkr.ecr.ap-south-1.amazonaws.com/employeerepo:latest
+      - docker build -t employeerepo:latest .
+      - docker tag employeerepo:latest 328859930614.dkr.ecr.ap-south-1.amazonaws.com/employeerepo:latest
   post_build:
     commands:
       - echo build Docker image complete `date`
