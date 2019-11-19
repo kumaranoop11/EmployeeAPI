@@ -6,11 +6,11 @@ phases:
   pre_build:
     commands:
       - echo logging in to AWS ECR...
-      - $(aws ecr get-login --region ap-south-1 --no-include-email | sed 's|https://||')
+      - $(aws ecr get-login --no-include-email --region ap-south-1 | sed 's|https://||')
   build:
     commands:
       - echo build Docker image on `date`
-      - docker build -t employeerepo:latest .
+      - docker build -t employeerepo .
       - docker tag employeerepo:latest 328859930614.dkr.ecr.ap-south-1.amazonaws.com/employeerepo:latest
   post_build:
     commands:
