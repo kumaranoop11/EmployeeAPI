@@ -1,6 +1,6 @@
 [
     {
-        "name": "employeeAPI",
+        "name": "EmpolyeeAPIContainer",
         "imageUri": "328859930614.dkr.ecr.ap-south-1.amazonaws.com/employeeapi:latest"
     }
 ]
