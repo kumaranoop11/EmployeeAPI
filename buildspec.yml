@@ -11,9 +11,13 @@ phases:
     commands:
       - echo build Docker image on `date`
       - docker build -t employeerepo .
-      - docker tag employeerepo:latest 328859930614.dkr.ecr.ap-south-1.amazonaws.com/employeerepo:latest
+      - docker tag employeerepo:latest 328859930614.dkr.ecr.ap-south-1.amazonaws.com/employeeapi:latest
   post_build:
     commands:
       - echo build Docker image complete `date`
       - echo push latest Docker images to ECR...
-      - docker push 328859930614.dkr.ecr.ap-south-1.amazonaws.com/employeerepo:latest
+      - docker push 328859930614.dkr.ecr.ap-south-1.amazonaws.com/employeeapi:latest
+      - echo Writing image definitions file...
+      - printf '[{"name":"hello-world","imageUri":"%s"}]' 328859930614.dkr.ecr.ap-south-1.amazonaws.com/employeeapi:latest > imagedefinitions.json
+artifacts:
+    files: imagedefinitions.json
