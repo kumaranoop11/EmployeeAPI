@@ -8,7 +8,7 @@ var authorization = require('../authorization/authorization')
 /* GET home page. */
 router.get('/', function(req, res, next) {
   //res.render('index', { title: 'fsffdsafdsafasfadsf' });
-  res.send('Welcome to Updated Employee API...');
+  res.send('Udpated the Welcome to Updated Employee API...');
 });
 
 router.use('/auth', authRouter);
