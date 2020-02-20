@@ -18,6 +18,6 @@ phases:
       - echo push latest Docker images to ECR...
       - docker push 328859930614.dkr.ecr.ap-south-1.amazonaws.com/employeeapi:latest
       - echo Writing image definitions file...
-      - printf '[{"name":"EmpolyeeAPIContainer","imageUri":"%s"}]' 328859930614.dkr.ecr.ap-south-1.amazonaws.com/employeeapi:latest > imagedefinitions.json
+      - printf '[{"name":"EmployeeContainer","imageUri":"%s"}]' 328859930614.dkr.ecr.ap-south-1.amazonaws.com/employeeapi:latest > imagedefinitions.json
 artifacts:
     files: imagedefinitions.json
